@@ -1,0 +1,106 @@
+/* General body styling with iOS-like blur gradient effect */
+body {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.3)), url('https://source.unsplash.com/random');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    backdrop-filter: blur(15px);
+    /* Apply the blur effect */
+    -webkit-backdrop-filter: blur(15px);
+}
+
+body{
+    background-color: black;
+}
+/* Calculator container styling */
+.calculator {
+    background: rgba(255, 255, 255, 0.15);
+    /* Semi-transparent background for a frosted glass effect */
+    border-radius: 25px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 350px;
+    backdrop-filter: blur(30px);
+    /* Inner blur effect */
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Display styling */
+.display {
+    background-color: rgba(0, 0, 0, 0.75);
+    /* Dark semi-transparent for contrast */
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 20px;
+    text-align: right;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Button grid layout */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* General button styling */
+.btn {
+    background: rgba(255, 255, 255, 0.2);
+    /* Semi-transparent for glassy buttons */
+    border: none;
+    border-radius: 15px;
+    font-size: 1.6rem;
+    padding: 15px;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+/* Button hover and active states */
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn:active {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(0.95);
+}
+
+/* Special button colors */
+.btn[data-action="clear"] {
+    background-color: rgba(255, 69, 58, 0.7);
+    /* iOS-style red */
+}
+
+.btn[data-action="clear"]:hover {
+    background-color: rgba(255, 69, 58, 0.9);
+}
+
+.btn[data-action="calculate"] {
+    background-color: rgba(52, 199, 89, 0.7);
+    /* iOS-style green */
+}
+
+.btn[data-action="calculate"]:hover {
+    background-color: rgba(52, 199, 89, 0.9);
+}
+
+/* Zero button span styling */
+.btn-zero {
+    grid-column: span 2;
+}
+
+/* Smooth button shadow */
+.btn {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
